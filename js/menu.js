@@ -1,17 +1,16 @@
 (() => {
-    const menuBtnRef = document.quertySelector("[data-menu-button]");
-    const molileMenuRef = document.quertySelector("[data-menu]");
-
-    menuBtnRef.addEventListener("click", () => {
-        const expanded =
-            menuBtnRef.getAttribute("aria-expanded") === "true" || false;
-        
-        menuBtnRef.classList.toggle("is-open");
-        menuBtnRef.setAttribute("aria-expanded", !expanded);
-
-        mobileMenuRef.classList.toggle("is-open");
-    });
-})();
-        
-        
+    const refs = {
+      openMenuBtn: document.querySelector(".menu-open-button"),
+      closeMenuBtn: document.querySelector(".menu-close-button"),
+      menu: document.querySelector(".menu-container"),
+      body: document.querySelector("body"),
+    };
   
+    refs.openMenuBtn.addEventListener("click", toggleMenu);
+    refs.closeMenuBtn.addEventListener("click", toggleMenu);
+  
+    function toggleMenu() {
+      refs.menu.classList.toggle("is-hidden");
+      refs.body.classList.toggle("no-scroll");
+    }
+  })();
