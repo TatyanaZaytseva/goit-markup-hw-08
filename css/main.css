@@ -586,6 +586,25 @@ img {
   opacity: 1;
   -webkit-transition: opacity 250ms var(--timing-funktion);
   transition: opacity 250ms var(--timing-funktion);
+  overflow-y: scroll;
+}
+
+@media screen and (min-width: 480px) {
+  .backdrop {
+    padding: 93px 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .backdrop {
+    padding: 208px 159px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .backdrop {
+    padding: 221px 536px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -599,11 +618,9 @@ img {
 }
 
 .modal {
-  position: absolute;
   top: 50%;
   left: 50%;
-  height: 581px;
-  width: 528px;
+  width: 100%;
   background-color: #fff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -614,6 +631,27 @@ img {
   transition: -webkit-transform 250 ms var(--timing-funktion);
   transition: transform 250 ms var(--timing-funktion);
   transition: transform 250 ms var(--timing-funktion), -webkit-transform 250 ms var(--timing-funktion);
+}
+
+@media screen and (max-width: 479px) {
+  .modal {
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__close-btn {
@@ -754,8 +792,8 @@ img {
 .form__check-text {
   font-family: 'Roboto';
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
   display: -webkit-box;
@@ -767,6 +805,20 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 479px) {
+  .form__check-text {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form__check-text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form__check-text span {
@@ -794,9 +846,16 @@ img {
   margin-left: 2px;
   font-family: inherit;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .form__policy-link {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form__checkbox:checked + .form__check-text span {
