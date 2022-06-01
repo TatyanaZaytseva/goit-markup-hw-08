@@ -15,8 +15,7 @@
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
-}
+ }
 
 .logo {
     color: var(--title-text-color);
@@ -43,7 +42,8 @@
         margin-left: 88px; 
      }
     @media screen and (min-width:1200px){
-       margin-left: 93px;  
+       margin-left: 93px; 
+        
     }
 }
 .site-nav__item:not(:last-child){
@@ -108,16 +108,28 @@
     margin-left: auto;
     
 }
+
+.contact-nav__item{
+    @media screen and (min-width:1200px){
+        display: flex;  
+        align-items: center;
+     } 
+}
 .contact-nav__item:not(:last-child){
     margin-bottom: 20px;
     @media screen and (min-width:768px){
-    margin-bottom: 0;
+    margin-bottom: 0px;
+    @media screen and (min-width:1200px){
+        margin-right: 30px;  
+     }
     } 
 }
-
 .contact-nav__item:not(:first-child){  
     @media screen and (min-width:768px){
     margin-bottom: 10px;
+    } 
+    @media screen and (min-width:1200px){
+        margin-bottom: 0;
     } 
 }
 
@@ -140,6 +152,13 @@
     @media screen and (min-width:768px){
         font-size: 12px;
         line-height: 1.16;
+        display: flex;
+        align-items: center;
+    } 
+    @media screen and (min-width:1200px){
+        font-size: 14px;
+        line-height: 1.14;
+       
     } 
 }
 .contact-nav__link--bigger-size{
@@ -156,8 +175,10 @@
         fill:currentColor;
         margin-right: 8px;
         align-self: center;
-     } 
-    
+    } 
+    @media screen and (min-width:1200px){
+        align-self: center;
+    } 
 }
 
 // .menu-button{
@@ -212,7 +233,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    hight: 100vh;
+    height: 100vh;
     z-index: 1;
     
     padding-top: 10px;
@@ -227,6 +248,13 @@
        
     }
 }
+
+.menu-container.is-hidden{
+    @media screen and (max-width: 767px){
+    opacity: 0;
+    pointer-events: none;
+}
+}
 .navigation, 
 .contacts{
     height: auto;
@@ -239,6 +267,9 @@
        margin-bottom: 0;
        margin-right: 84px;
     }
+    @media screen and (min-width:1200px){
+        margin-right: 305px;  
+     }
 }
 .contact-nav{
     margin-bottom: 64px;
@@ -249,6 +280,11 @@
         justify-content: center;
         padding-top: 21px;
     }
+    @media screen and (min-width:1200px){
+        flex-direction: row; 
+        padding-top: 32px;
+        padding-bottom: 32px;
+     }
 }
 .contact-soc-list{
     @media screen and (max-width: 767px){
@@ -261,7 +297,7 @@
 .contact-soc-list__item{
     margin-left: 0;
     padding-right: 10px;
-   }
+}
 .contact-soc-list__item:not(:first-child){
     padding-left: 10px;
 }
@@ -278,5 +314,5 @@
 }
 
 .no-scroll{
-    overflow: hidden;
+overflow: hidden;
 }

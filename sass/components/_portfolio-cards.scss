@@ -1,12 +1,23 @@
 
 .list-cards{
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
+    @media screen and (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -15px;
+            }
+   
 }
 .project{
+    @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+    }
+    @media screen and (min-width: 768px) {
     margin: 15px;
-
+    width: calc((100% - 60px)/2);
+    }
+    @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px)/3);
+    }
     &:hover .image-overlay,
     &:focus .image-overlay{
     transform: translateY(-100%);
@@ -35,12 +46,21 @@
     &:focus{
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
+    @media screen and (min-width: 768px) {
+             display: flex;
+             flex-direction: column;
+             height: 100%;
+         }
 }
 
 
 .project__description{
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
+    @media screen and (min-width: 768px) {
+        flex-grow: 1;
+    }
+
 }
 .project__image{
     position:relative;
