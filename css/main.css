@@ -45,7 +45,7 @@ button {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -333,6 +333,13 @@ img {
   }
 }
 
+@media screen and (max-width: 420px) {
+  .contact-nav__link--bigger-size {
+    font-size: 26px;
+    line-height: 1.17;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .contact-nav__icons {
     display: none;
@@ -509,6 +516,13 @@ img {
   text-decoration: none;
 }
 
+@media screen and (max-width: 460px) {
+  .contact-soc-list__link {
+    font-size: 12px;
+    line-height: 1.22;
+  }
+}
+
 .no-scroll {
   overflow: hidden;
 }
@@ -535,7 +549,7 @@ img {
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mob-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1481,6 +1495,12 @@ img {
   color: rgba(255, 255, 255, 0.6);
   -webkit-transition: border 250ms var(--timing-funktion);
   transition: border 250ms var(--timing-funktion);
+}
+
+@media screen and (max-width: 360px) {
+  .footer__form-input {
+    width: 300px;
+  }
 }
 
 .footer__form-input:focus {
