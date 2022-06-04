@@ -39,12 +39,8 @@
     
     @media screen and (min-width:768px){
         display:flex;
-        margin-left: 88px; 
+       
      }
-    @media screen and (min-width:1200px){
-       margin-left: 93px; 
-        
-    }
 }
 .site-nav__item:not(:last-child){
     margin-bottom: 32px;
@@ -249,7 +245,11 @@
     @media screen and (min-width: 767px){
         display: flex; 
         justify-content: space-between;
-       
+        align-items: center;
+        margin-left: 88px;
+    }
+    @media screen and (min-width:1200px) {
+        margin-left: 93px;
     }
 }
 
@@ -270,10 +270,12 @@
     @media screen and (min-width: 768px){
        margin-bottom: 0;
        margin-right: 84px;
+       
     }
     @media screen and (min-width:1200px){
-        margin-right: 305px;  
-     }
+        margin-right: 305px;
+         
+    }
 }
 .contact-nav{
     margin-bottom: 64px;
@@ -282,7 +284,7 @@
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
-        padding-top: 21px;
+        
     }
     @media screen and (min-width:1200px){
         flex-direction: row; 

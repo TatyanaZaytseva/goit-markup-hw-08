@@ -95,7 +95,6 @@ img {
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -129,6 +128,7 @@ img {
   .section-title {
     font-size: 36px;
     line-height: 1.16;
+    margin-bottom: 50px;
   }
 }
 
@@ -182,13 +182,6 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 88px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .site-nav {
-    margin-left: 93px;
   }
 }
 
@@ -415,6 +408,16 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    margin-left: 93px;
   }
 }
 
@@ -465,7 +468,6 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-top: 21px;
   }
 }
 
@@ -622,6 +624,7 @@ img {
   -webkit-transition: opacity 250ms var(--timing-funktion);
   transition: opacity 250ms var(--timing-funktion);
   overflow-y: scroll;
+  padding: 10px;
 }
 
 @media screen and (min-width: 480px) {
@@ -743,11 +746,6 @@ img {
 
 .form__field {
   position: relative;
-  margin-bottom: 10px;
-}
-
-.form__field:last-child {
-  margin-bottom: 20px;
 }
 
 .form__field textarea::-webkit-input-placeholder {
@@ -788,6 +786,10 @@ img {
 
 .form__field:focus-within > .form__input-icons {
   fill: var(--accent-color);
+}
+
+.form__field:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .form__label {
@@ -900,6 +902,10 @@ img {
 
 .form__checkbox:checked + .form__check-text .form__check-icon {
   fill: #FFFFFF;
+}
+
+.form__button {
+  margin-top: 31px;
 }
 
 .features {
@@ -1182,6 +1188,7 @@ img {
 }
 
 .clients__item {
+  height: 92px;
   width: calc(100% / 2 - 30px);
   margin-left: 30px;
   margin-bottom: 30px;
@@ -1205,6 +1212,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  height: 100%;
   border-radius: 4px;
   border: 1px solid #AFB1B8;
   /* background-color: #E5E5E5; */
@@ -1624,12 +1633,6 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .project {
-    margin-bottom: 30px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .project {
     margin: 15px;
@@ -1647,6 +1650,12 @@ img {
 .project:focus .image-overlay {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
+}
+
+@media screen and (max-width: 767px) {
+  .project:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .project__name {
